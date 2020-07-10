@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Us</title>
+  </head>
+  <body class="bg">
+    <div class="sidenav" id="theSideNav">
+      <a class="home" id="home" href="index.html">Home</a>
+      <a class="active" id="about" href="about.html">About</a>
+      <a class="contact" id="contact" href="contact.html">Contact</a>
+    </div>
+
+    <br>
+
+    <div class="about-us">
+      <h1>Hello! We are Gamer's Engine</h1>
+      <br>
+    </div>
+
+    <br>
+    <br>
+
+    <button class="accordion"><strong>What is Gamer's Engine?</strong></button>
+    <div class="panel">
+      <p>Glad you asked. Gamer's Engine is a web application that provides you a place
+      where all gaming information is located, without having the hassle to click around
+      multiple websites.</p>
+    </div>
+
+    <button class="accordion"><strong>What is our objective?</strong></button>
+    <div class="panel">
+      <p>Great question! We at Gamer's Engine want to provide the best web application
+        for you, the gamer, to search for any video game and be able to find the most
+        relevant information that an elite gamer would care about, all in one place.
+        This is made possible thanks to the wonderful people who created RAWG Video Game
+        Database (Rapid API).</p>
+    </div>
+
+    <button class="accordion"><strong>What kind of information will we provide?</strong></button>
+    <div class="panel">
+      <p>Another excellent question. We provide any relevant information any gamer would
+      for in a specific videogame. Whether that includes:
+      <ul class=list>
+        <li>the game's description</li>
+        <li>pricing and location</li>
+        <li>its rating</li>
+      </ul></p>
+      <p> and many more.</p>
+    </div>
+    <br>
+    <br>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+      });
+    }
+    </script>
+
+    <footer id="footer">
+      <p><strong>Copyright &copy; Gamer's Engine</strong></p>
+      <span><strong>Photo by <a href="https://unsplash.com/@mazurekphotographer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Bartek Mazurek</a> on
+        <a href="https://unsplash.com/s/photos/playstation?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Unsplash</a></strong></span>
+    </footer>
+  </body>
+</html>
