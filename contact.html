@@ -1,27 +1,3 @@
-<?php
-    $message_sent = false;
-    if(isset($_POST['email']) && $_POST['name'] != '') {
-      if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) { //if email is valid
-        // submiting the form
-        $userName= $_POST['name'];
-        $userEmail= $_POST['email'];
-        $messageSubject= $_POST['subject'];
-        $message= $_POST['Message'];
-
-        $to = "spj0698@gmail.com";
-        $body = "";
-
-        $body .="From: ".$userName."\r\n";
-        $body .="Email: ".$userEmail."\r\n";
-        $body .="Message: ".$message."\r\n";
-        $message_sent = true;
-      }
-      else {
-        $invalid_class_name = "form-invalid";
-      }
-    }
-?>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,20 +9,13 @@
 </head>
 
 <body>
-  <?php
-  if($message_sent):
-  ?>
-    <h3>Thanks, we'll be in touch</h3>
-  <?php
-  else:
-  ?>
     <div class="container">
         <form action="contact.php" method="POST" class="form">
           <h1>Contact Us</h1>
           <h2>We will try to get back to you asap</h2>
             <div class="form-group">
                 <label for="name" class="form-label">Your Full Name</label>
-                <input type="text" class="form-control <?=$invalid_class_name ?? ""?>" id="name" name="name" placeholder="Enter name..." tabindex="1" required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name..." tabindex="1" required>
             </div>
             <div class="form-group">
                 <label for="email" class="form-label">Your Email</label>
@@ -65,9 +34,5 @@
             </div>
         </form>
     </div>
-    <?php
-    endif;
-    ?>
 </body>
-
 </html>
