@@ -1,185 +1,82 @@
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
 body {
-  text-align: center;
-  background-image: url("/img/at.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: sans-serif;
-  height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:"Raleway", sans-serif;
+    background-color:#627b8a;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
+.container{
+    width:500px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+    padding:2em;
+    background-color:#fff;
 }
-
-li {
-  float: left;
+.form-group{
+    margin-bottom:1.5em;
+    transition:all .3s;
 }
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;
-}
-
-.contact-title {
-  color: white;
-  text-transform: uppercase;
-  transition: all 4s ease-in-out;
-}
-
-.contact-title h1 {
-  font-size: 50px;
-  line-height: 180px;
-  text-align: center;
-}
-
-.contact-title  h2 {
-  font-size: 30px;
-  text-align: center;
-}
-
-/*form {
-  margin-top: 50px;
-  transition-delay: 2s;
-}
-.form-control {
-  width: 600px;
-  background: transparent;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid white;
-  color: #333;
-  font-size: 18px;
-  margin-bottom: 16px;
-}
-
-::placeholder {
-  color: white;
-  opacity: 1;
-}
-
-input {
-  height: 45px;
-}
-
-form .submit {
-  background: transparent;
-  border-color: transparent;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  height: 50px;
-  margin-top: 20px;
-}
-
-form .submit:hover {
-  background-color: #f44336;
-  cursor: pointer;
-}
-
-footer {
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  color: white;
-}*/
-
-label {
+.form-label{
+    font-size:.75em;
+    color:var(--font-color);
     display:block;
-    margin-top:20px;
-    letter-spacing:2px;
+    opacity:0;
+    transition: all .3s;
+    transform:translateX(-50px);
+}
+.form-control{
+    box-shadow:none;
+    border-radius:0;
+    border-color:#ccc;
+    border-style:none none solid none;
+    width:100%;
+    font-size:1.25em;
+    transition:all .6s;
+}
+.form-control::placeholder{
+    color:#aaa;
+}
+.form-control:focus{
+    box-shadow:none;
+    border-color:var(--font-hover-color);
+    outline:none;
+}
+.form-group:focus-within{
+    transform:scale(1.1,1.1);
 }
 
-.body {
-    display:block;
-    margin:0 auto;
-    width:576px;
+.form-control:invalid:focus{
+    border-color:red;
+}
+.form-control:valid:focus{
+    border-color:green;
 }
 
-/* Centre the form within the page */
-form {
-    margin:0 auto;
-    width:459px;
+.btn{
+    background: 0 0 #fff;
+    border:1px solid #aaa;
+    border-radius:3px;
+    color:var(--font-color);
+    font-size:1em;
+    padding:10 50px;
+    text-transform:uppercase;
 }
-
-/* Style the text boxes */
-input, textarea {
-  width:439px;
-  height:27px;
-  background:#efefef;
-  border:1px solid #dedede;
-  padding:10px;
-  margin-top:3px;
-  font-size:0.9em;
-  color:#3a3a3a;
+.btn:hover{
+    border-color: var(--font-hover-color);
+    color: var(--font-hover-color);
 }
 
 textarea {
-  height:213px;
-  background:url("../img/at.jpg") right no-repeat #efefef;
+    resize:none;
 }
 
-input, textarea {
-    width:439px;
-    height:27px;
-    background:#efefef;
-    border:1px solid #dedede;
-    padding:10px;
-    margin-top:3px;
-    font-size:0.9em;
-    color:#3a3a3a;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    border-radius:5px;
+.focused > .form-label{
+    opacity:1;
+    transform:translateX(0px);
+
 }
 
-input:focus, textarea:focus {
-    border:1px solid #97d6eb;
+.form-invalid {
+  outline: 2px solid red !important;
 }
-
-#submit {
-    width:127px;
-    height:38px;
-    background:url(images/submit.jpg);
-    text-indent:-9999px;
-    border:none;
-    margin-top:20px;
-    cursor:pointer;
-}
-
-#submit:hover {
-      opacity:.9;
-  }
-
-footer {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    color: white;
-  }
