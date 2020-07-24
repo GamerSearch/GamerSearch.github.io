@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html"; charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" text="text/css" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Contact Us</title>
   </head>
   <body class="bg">
-    <div class="sidenav" id="theSideNav">
-      <a class="active" id="home" href="index.html">Home</a>
-      <a class="about" id="about" href="about.html">About</a>
-      <a class="contact" id="contact" href="contact.html">Contact</a>
-    </div>
+    <ul>
+      <li><a class="home" id="home" href="index.html">Home</a></li>
+      <li><a class="about" id="about" href="about.html">About</a></li>
+      <li><a class="active" id="contact" href="contact.html">Contact</a></li>
+    </ul>
     <div class="contact-title">
       <h1>Contact Us</h1>
       <h2>Leave us a message and we will try to get back to you</h2>
     </div>
 
-    <div class="contact-form">
-      <form id="contact-form" method="post" action="">
-        <input type="text" name="name" class="form-control" placeholder="Enter your full name..." required><br>
+    <header class="body"></header>
 
-        <input type="text" name="email" class="form-control" placeholder="Enter your email..." required><br>
+    <section class="body">
+      <div class="container">
+        <form class="contact-form" method="POST" action="contact.php">
+          <input type="text" name="name" placeholder="Full name" required>
+          <input type="text" name="mail" placeholder="Email" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Message"></textarea>
+        </form>
+    </section>
 
-        <textarea name="message" class="form-control" placeholder="Enter your message..." rows="4" required></textarea><br>
-
-        <input type="submit" class="form-control submit" value="Submit">
-      </form>
-    </div>
-    <footer id="footer">
-      <p><strong>Copyright &copy; Gamer Search</strong></p>
-      <span><strong>Photo by <a href="https://unsplash.com/@melindagimpel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Melinda Gimpel</a> on
-        <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Unsplash</a></strong></span>
+    <footer class="body">
+      Copyright &copy; Gamer's Engine 2020
+      <span><strong>Photo by <a href="https://unsplash.com/@saksham?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Melinda Gimpel</a> on
+        <a href="https://unsplash.com/s/photos/group?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Unsplash</a></strong></span>
     </footer>
   </body>
 </html>
