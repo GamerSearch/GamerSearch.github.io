@@ -15,7 +15,7 @@ $(function() {
 });
 
 function submitForm() {
-    var frm = document.getElementsByName('form-group')[0];
+    var frm = document.getElementsByName('form')[0];
     frm.submit();
     frm.reset();
     return false;
