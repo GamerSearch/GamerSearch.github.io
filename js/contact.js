@@ -13,3 +13,10 @@ $(function() {
     });
 
 });
+
+function submitForm() {
+    var frm = document.getElementsByName('form-group')[0];
+    frm.submit();
+    frm.reset();
+    return false;
+}
