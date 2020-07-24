@@ -12,56 +12,59 @@ body, html {
 }
 
 .intro h1 {
-  font-size: 60px;
+  top: 100px;
+  position: relative;
+  font-size: 70px;
   color: white;
   text-shadow: white;
 }
 
 .intro p {
-  font-size: 30px;
-  color:  #ecf0f1 ;
+  top: 85px;
+  position: relative;
+  font-size: 45px;
+  color:  #ecf0f1;
 }
 
 .intro h1, p {
   text-align: center;
 }
 
-#theSideNav a {
-  position: absolute;
-  left: -80px;
-  transition: 0.3s;
-  padding: 20px;
-  width: 100px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 0 5px 5px 0;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-#theSideNav a:hover {
-  left: 0;
+li {
+  float: left;
 }
 
-#home {
-  top: 20px;
-  background-color: red;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-#about {
-  top: 80px;
-  background-color: orange;
+li a:hover {
+  background-color: #111;
 }
 
-#contact {
-  top: 140px;
-  background-color: green;
+.active {
+  background-color: #4CAF50;
 }
 
 .search-container{
   position: relative;
-  width: 400px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 90px auto;
 }
 .search-container input {
   width: 90%;
@@ -71,7 +74,7 @@ body, html {
 
 .search-container button {
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 2px;
   border: none;
   background: #ededed;
