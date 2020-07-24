@@ -35,18 +35,9 @@
                 <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="4"></textarea>
             </div>
             <div>
-                <button type="submit" class="btn" value="submit" onclick="submitForm()">Send Message!</button>
+                <button type="submit" class="btn" id="myInput" value="submit" onclick="document.getElementById('myInput').value=''">Send Message!</button>
             </div>
-            
-            <script>
-                function submitForm() {
-                var frm = document.getElementsByName('form')[0];
-                frm.submit();
-                frm.reset();
-                return false;
-            }
-            </script>
-        </form>
+         </form>
     </div>
 </body>
 </html>
