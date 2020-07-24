@@ -5,43 +5,42 @@ body, html {
 
 body {
   text-align: center;
-  background: url(/img/contact.jpg);
+  background-image: url("/img/at.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   font-family: sans-serif;
   height: 100%;
 }
 
-#theSideNav a {
-  position: absolute;
-  left: -80px;
-  transition: 0.3s;
-  padding: 20px;
-  width: 100px;
-  text-decoration: none;
-  font-size: 20px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+li a {
+  display: block;
   color: white;
-  border-radius: 0 5px 5px 0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-#theSideNav a:hover {
-  left: 0;
+li a:hover {
+  background-color: #111;
 }
 
-#home {
-  top: 20px;
-  background-color: red;
-}
-
-#about {
-  top: 80px;
-  background-color: orange;
-}
-
-#contact {
-  top: 140px;
-  background-color: green;
+.active {
+  background-color: #4CAF50;
 }
 
 .contact-title {
@@ -51,15 +50,17 @@ body {
 }
 
 .contact-title h1 {
-  font-size: 40px;
-  line-height: 30px;
+  font-size: 50px;
+  line-height: 180px;
+  text-align: center;
 }
 
 .contact-title  h2 {
-  font-size: 16px;
+  font-size: 30px;
+  text-align: center;
 }
 
-form {
+/*form {
   margin-top: 50px;
   transition-delay: 2s;
 }
@@ -68,10 +69,15 @@ form {
   background: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid grey;
-  color: #fff;
+  border-bottom: 1px solid white;
+  color: #333;
   font-size: 18px;
   margin-bottom: 16px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
 }
 
 input {
@@ -93,11 +99,87 @@ form .submit:hover {
   cursor: pointer;
 }
 
-#footer {
+footer {
   position: absolute;
   text-align: center;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
   color: white;
+}*/
+
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
 }
+
+.body {
+    display:block;
+    margin:0 auto;
+    width:576px;
+}
+
+/* Centre the form within the page */
+form {
+    margin:0 auto;
+    width:459px;
+}
+
+/* Style the text boxes */
+input, textarea {
+  width:439px;
+  height:27px;
+  background:#efefef;
+  border:1px solid #dedede;
+  padding:10px;
+  margin-top:3px;
+  font-size:0.9em;
+  color:#3a3a3a;
+}
+
+textarea {
+  height:213px;
+  background:url("../img/at.jpg") right no-repeat #efefef;
+}
+
+input, textarea {
+    width:439px;
+    height:27px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+input:focus, textarea:focus {
+    border:1px solid #97d6eb;
+}
+
+#submit {
+    width:127px;
+    height:38px;
+    background:url(images/submit.jpg);
+    text-indent:-9999px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+#submit:hover {
+      opacity:.9;
+  }
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    color: white;
+  }
