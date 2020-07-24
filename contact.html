@@ -15,7 +15,7 @@
       <li><a class="active" id="contact" href="contact.html">Contact</a></li>
     </ul>
     <div class="container">
-        <form action="https://app.99inbound.com/api/e/0TwRxCXz" name="form" method="POST" target="_blank" class="form">
+        <form action="https://app.99inbound.com/api/e/0TwRxCXz" id="myForm" name="form" method="POST" target="_blank" class="form">
           <h1>Contact Us</h1>
           <h2>We will try to get back to you asap</h2>
             <div class="form-group">
@@ -35,9 +35,13 @@
                 <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="4"></textarea>
             </div>
             <div>
-                <button type="submit" class="btn" id="myInput" value="submit" onclick="document.getElementById('myInput').value=''">Send Message!</button>
+                <button type="submit" class="btn" value="submit" onclick="doReset()">Send Message!</button>
             </div>
          </form>
+        <script>
+            function doReset() {
+                document.getElementById("myForm").reset();
+            }
     </div>
 </body>
 </html>
