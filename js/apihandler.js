@@ -13,7 +13,7 @@
   ApiHandler.prototype.searchGame = function (searchString) {
     var fullString = this.serverUrl + '?search=' + searchString;
     return $.get(fullString, function(serverResponse) {
-      console.log(serverResponse);
+      return serverResponse["results"].slice(0, 5);
     });
   };
 
