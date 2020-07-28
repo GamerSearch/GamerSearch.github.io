@@ -3,7 +3,7 @@ body, html {
   margin: 0;
 }
 
-.bg {
+.bg{
   background-image: url("/img/xbox.jpg");
   height: 100%;
   background-position: center;
@@ -11,7 +11,7 @@ body, html {
   background-size: cover;
 }
 
-.intro h1 {
+/*.intro h1 {(/
   top: 100px;
   position: relative;
   font-size: 70px;
@@ -29,6 +29,7 @@ body, html {
 .intro h1, p {
   text-align: center;
 }
+*/
 
 ul {
   list-style-type: none;
@@ -65,34 +66,17 @@ li a:hover {
   position: relative;
   width: 100%;
   margin: 90px auto;
-  padding-left: 15%;
-  padding-right: 15%;
+  
 }
-.search-container input {
+.search-content input {
   width: 100%;
   padding: 15px;
   font-size: 17px;
+  overflow:hidden;
 }
 
-.search-container button {
-  position: absolute;
-  right: 15%;
-  top: 1px;
-  border: none;
-  height: 56px;
-  background: #ededed00;
-  border-radius: 3px;
-  padding: 14px;
-  transition: all .2s;
-  font-size: 17px;
-  overflow: hidden;
-}
 
-.search-container button:hover {
-  background-color: grey;
-  color: #fff;
-  cursor: pointer;
-}
+
 
 #footer {
   position: absolute;
@@ -102,3 +86,64 @@ li a:hover {
   height: 2.5rem;
   color: white;
 }
+
+
+
+/* new added content : edit - Mina Trevizo */
+
+#content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  height: 100%;
+  padding: 1em;
+
+  background-image: url("/img/xbox.jpg");
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
+
+.navBar {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.search-content{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 50px;
+  overflow: hidden;
+
+}
+.search-content button {
+  flex: 1;
+  float: left;
+  background-color: #9999ff;
+  border:#3333ff;
+  margin-left: 10px;
+  height: fit-content;
+  color:white;
+  padding: 20px; 
+  width: 20%;
+  transition: all .2s;
+  font-size: 17px;
+  
+}
+.search-content button:hover {
+  
+  background-color: grey;
+  color: #fff;
+  cursor: pointer;
+}
+
