@@ -1,4 +1,3 @@
-
 function drawMoreInfoPage(gameInfo) {
   let output = `
       <div class="col-md-4>
@@ -8,7 +7,7 @@ function drawMoreInfoPage(gameInfo) {
       <div class="col-md-8">
           <h2>${gameInfo.name}</h2>
           <ul class="list-group">
-              <li class="list-group-item"><strong>Rating:</strong> ${gameInfo.metacritic}<li>
+              <li class="list-group-item"><strong>Rating:</strong> ${gameInfo.metacritic}</li>
               <li class="list-group-item"><strong>Released:</strong> ${gameInfo.released}</li>
               <li class="list-group-item"><strong>Stores:</strong> ${gameInfo.stores}</li>
               <li class="list-group-item"><strong>Platforms:</strong> ${gameInfo.platforms}</li>
