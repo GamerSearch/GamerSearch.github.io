@@ -1,6 +1,6 @@
 (function (window) {
   'use strict';
-  var FORM_SELECTOR = '[data-search-bar="form"]'
+  var FORM_SELECTOR = '[class="searchForm"]'
   var INPUT_SELECTOR = '[id="searchBar"]';
   var SEARCH_BUTTON_SELECTOR = '[id="wrapper"]';
   var SERVER_URL = 'https://api.rawg.io/api/games';
@@ -13,7 +13,7 @@
   var apiHandler = new ApiHandler(SERVER_URL);
 
   formHandler.addSubmitHandler( function (data) {
-    return apiHandler.searchGame.call(apiHandler, data)
+    return apiHandler.searchGames.call(apiHandler, data)
     .then(function (serverResponse) {
       var allResults = serverResponse["results"];
       var continueForm = false;
