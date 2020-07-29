@@ -34,6 +34,7 @@ function drawWindows(item, index) {
   image.alt = item['slug'];
 
   var imageContainer = document.createElement('div');
+  imageContainer.style = 'max-width:500px;min-width:50px';
   imageContainer.className = 'image-container';
   imageContainer.appendChild(image);
 
