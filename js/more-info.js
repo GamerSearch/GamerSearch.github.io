@@ -6,7 +6,7 @@ function drawMoreInfoPage(gameInfo) {
       </div>
 
       <div class="col-md-8">
-          <h2>${gameInfo.title}</h2>
+          <h2>${gameInfo.name}</h2>
           <ul class="list-group">
               <li class="list-group-item"><strong>Rating:</strong> ${gameInfo.metacritic}<li>
               <li class="list-group-item"><strong>Released:</strong> ${gameInfo.released}</li>
