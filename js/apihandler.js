@@ -18,7 +18,7 @@
   };
 
   ApiHandler.prototype.searchGame = function (id) {
-    var fullString = this.serverUrl + id;
+    var fullString = this.serverUrl + '/' + id;
     return $.get(fullString, function (serverResponse) {
       return serverResponse;
     });
