@@ -1,9 +1,24 @@
 MAIN_CONTENT_SELECTOR = 'main-content';
+var SERVER_URL = 'https://api.rawg.io/api/games/';
 
+var App = window.App;
+var ApiHandler = App.ApiHandler;
 
-var topFive = JSON.parse(sessionStorage.getItem('topFive'));
-console.log("LOOK topFive: ");
-console.log(topFive)
+var apiHandler = new ApiHandler(SERVER_URL);
+
+function addButtonsHandler() {
+  'use strict';
+  var allDivsArr = Array.from(document.getElementsByClassName('container'));
+  allDivsArr.forEach( function (item) {
+    item.addEventListener('click', function(event) {
+      return apiHandler.searchGame.call(apiHandler, item['id'])
+      .then( function (serverResponse) {
+        sessionStorage.setItem('gameInfo', JSON.stringify(serverResponse));
+        window.location.replace("more-info.html")
+      })
+    });
+  });
+}
 
 function drawTopResults () {
   'use strict';
@@ -30,7 +45,8 @@ function drawWindows(item, index) {
   titleContainer.appendChild(title);
 
   var overralContainer = document.createElement('div');
-  overralContainer.className = 'container'
+  overralContainer.className = 'container';
+  overralContainer.id = item['id'];
 
   overralContainer.appendChild(imageContainer);
   overralContainer.appendChild(titleContainer);
@@ -39,9 +55,11 @@ function drawWindows(item, index) {
   frame.appendChild(overralContainer);
 }
 
-function initializeEvent() {
+function init() {
   'use strict';
   drawTopResults();
+  addButtonsHandler();
 }
 
-initializeEvent();
+var topFive = JSON.parse(sessionStorage.getItem('topFive'));
+init();

@@ -13,7 +13,7 @@
   var apiHandler = new ApiHandler(SERVER_URL);
 
   formHandler.addSubmitHandler( function (data) {
-    return apiHandler.searchGame.call(apiHandler, data)
+    return apiHandler.searchGames.call(apiHandler, data)
     .then(function (serverResponse) {
       var allResults = serverResponse["results"];
       var continueForm = false;
