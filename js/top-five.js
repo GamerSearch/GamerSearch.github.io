@@ -14,7 +14,7 @@ function addButtonsHandler() {
       return apiHandler.searchGame.call(apiHandler, item['id'])
       .then( function (serverResponse) {
         sessionStorage.setItem('gameInfo', JSON.stringify(serverResponse));
-        window.location.replace("more-info.html")
+        window.location.href = "more-info.html";
       })
     });
   });
@@ -34,11 +34,10 @@ function drawWindows(item, index) {
   image.alt = item['slug'];
 
   var imageContainer = document.createElement('div');
-  imageContainer.style = 'max-width:500px;min-width:50px';
   imageContainer.className = 'image-container';
   imageContainer.appendChild(image);
 
-  var title = document.createElement('p');
+  var title = document.createElement('label');
   title.innerHTML = item['name'];
 
   var titleContainer = document.createElement('div');
@@ -48,6 +47,8 @@ function drawWindows(item, index) {
   var overralContainer = document.createElement('div');
   overralContainer.className = 'container';
   overralContainer.id = item['id'];
+  if (index%2==0) { overralContainer.style.backgroundColor = '#7d3d36'; }
+  else { overralContainer.style.backgroundColor = '#552e1c';  }
 
   overralContainer.appendChild(imageContainer);
   overralContainer.appendChild(titleContainer);
