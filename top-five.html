@@ -6,21 +6,50 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
     <title>Gamer's Engine</title>
   </head>
 
-  <ul>
-    <li><a class="active" id="home" href="index.html">Home</a></li>
-    <li><a class="about" id="about" href="about.html">About</a></li>
-    <li><a class="contact" id="contact" href="contact.html">Contact</a></li>
-  </ul>
-  <section class="intro">
-    <h1><b>TOP RESULTS<b></h1>
-  </section>
+  <!-- [  deleting out: <body class="bg"> ]  -->
+  <body>
+    <div class = "navBar">
+      <ul>
+        <li><a class="active" id="home" href="index.html">Home</a></li>
+        <li><a class="about" id="about" href="about.html">About</a></li>
+        <li><a class="contact" id="contact" href="contact.html">Contact</a></li>
+      </ul>
+    </div>  <!-- end of navBar-->
 
-  <body class="bg">
+    <!-- [  deleting out: <section class="intro"> ] -->
+    <div class = "titleBar">
+      <h1><b>Top Results</b></h1>
+      <p><strong>Here are the top results for your search.</strong></p>
+      </div>
+    <!-- [  deleting out: </section>  ] -->
+    <br>
+
+    <form class="searchForm">
+      <div class = "search-content">
+        <input type="text" name="search-text" id="searchInput" class="search-input" placeholder="Find a game...."/>
+        <button class="search-button" id="searchButton"><i class="fa fa-search"></i></button>
+      </div>
+    </form>
+
+    <div class="main-content">
+
+    </div>
+
+
+    <footer id="footer">
+      <p>Copyright &copy; Gamer's Engine 2020</p>
+      <span>Photo by <a href="https://unsplash.com/@v4ssu?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Hardik Sharma</a> on
+        <a href="https://unsplash.com/s/photos/xbox?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Unsplash</a></span>
+    </footer>
+
+  </body> <!-- end of div id: search-content -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <script src="js/top-five.js" charset="utf-8"></script>
-  </body>
 
 </html>

@@ -1,6 +1,6 @@
 (function (window) {
   'use strict';
-  var FORM_SELECTOR = '[data-search-bar="form"]'
+  var FORM_SELECTOR = '[class="searchForm"]'
   var INPUT_SELECTOR = '[id="searchBar"]';
   var SEARCH_BUTTON_SELECTOR = '[id="wrapper"]';
   var SERVER_URL = 'https://api.rawg.io/api/games';

@@ -1,4 +1,4 @@
-MAIN_CONTENT_SELECTOR = '[data-main-content="main"]';
+MAIN_CONTENT_SELECTOR = 'main-content';
 
 
 var topFive = JSON.parse(sessionStorage.getItem('topFive'));
@@ -12,11 +12,31 @@ function drawTopResults () {
 
 function drawWindows(item, index) {
   'use strict';
-  var newDiv = document.createElement('div');
-  newDiv.className = "d-inline-flex p-2";
-  newDiv.style.color = "white";
-  newDiv.innerHTML = item['name'];
-  document.body.appendChild(newDiv);
+
+  var image = document.createElement('img');
+  image.src = item['background_image'];
+  image.className = 'img-responsive';
+  image.alt = item['slug'];
+
+  var imageContainer = document.createElement('div');
+  imageContainer.className = 'image-container';
+  imageContainer.appendChild(image);
+
+  var title = document.createElement('p');
+  title.innerHTML = item['name'];
+
+  var titleContainer = document.createElement('div');
+  titleContainer.className = 'title-container';
+  titleContainer.appendChild(title);
+
+  var overralContainer = document.createElement('div');
+  overralContainer.className = 'container'
+
+  overralContainer.appendChild(imageContainer);
+  overralContainer.appendChild(titleContainer);
+
+  var frame = document.getElementsByClassName(MAIN_CONTENT_SELECTOR)[0];
+  frame.appendChild(overralContainer);
 }
 
 function initializeEvent() {
