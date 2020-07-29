@@ -3,34 +3,6 @@ body, html {
   margin: 0;
 }
 
-.bg{
-  background-image: url("/img/xbox.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/*.intro h1 {(/
-  top: 100px;
-  position: relative;
-  font-size: 70px;
-  color: white;
-  text-shadow: white;
-}
-
-.intro p {
-  top: 85px;
-  position: relative;
-  font-size: 200%;
-  color:  #ecf0f1;
-}
-
-.intro h1, p {
-  text-align: center;
-}
-*/
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -63,7 +35,7 @@ li a:hover {
 }
 
 .search-container{
-  position: relative;
+  position: auto;
   width: 100%;
   margin: 90px auto;
   
@@ -94,12 +66,12 @@ li a:hover {
 #content{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align:center;
   justify-content: center;
   
+  
   height: 100%;
-  padding: 1em;
-
+  
   background-image: url("/img/xbox.jpg");
   
   background-position: center;
@@ -110,24 +82,29 @@ li a:hover {
 }
 
 .navBar {
-  position: relative;
   width: 100%;
   overflow: hidden;
 
 }
 
+.titleBar{
+  color: white;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
 .search-content{
   display: flex;
   flex-direction: row;
-  position: relative;
+  position: auto;
   width: 100%;
   height: fit-content;
   padding: 50px;
   overflow: hidden;
 
 }
+
 .search-content button {
-  flex: 1;
+
   float: left;
   background-color: #9999ff;
   border:#3333ff;
@@ -135,7 +112,7 @@ li a:hover {
   height: fit-content;
   color:white;
   padding: 20px; 
-  width: 20%;
+  
   transition: all .2s;
   font-size: 17px;
   
@@ -146,4 +123,5 @@ li a:hover {
   color: #fff;
   cursor: pointer;
 }
+
 
