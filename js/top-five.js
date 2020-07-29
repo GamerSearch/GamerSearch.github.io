@@ -1,10 +1,13 @@
-MAIN_CONTENT_SELECTOR = 'main-content';
-var SERVER_URL = 'https://api.rawg.io/api/games/';
+var MAIN_CONTENT_SELECTOR = 'main-content';
+var SERVER_URL = 'https://api.rawg.io/api/games';
+var FORM_SELECTOR = '[class="searchForm"]';
 
 var App = window.App;
 var ApiHandler = App.ApiHandler;
+var FormHandler = App.FormHandler;
 
 var apiHandler = new ApiHandler(SERVER_URL);
+var formHandler = new FormHandler(FORM_SELECTOR);
 
 function addButtonsHandler() {
   'use strict';
@@ -62,6 +65,29 @@ function init() {
   drawTopResults();
   addButtonsHandler();
 }
+
+formHandler.addSubmitHandler( function (data) {
+  return apiHandler.searchGames.call(apiHandler, data)
+  .then(function (serverResponse) {
+    var allResults = serverResponse["results"];
+    var continueForm = false;
+
+    if (allResults.length == 0) {
+      alert("There were no games matching '" + data + "' in the database." )
+    }
+    else {
+      continueForm = true;
+      if (allResults.length >= 5) { var topFive = allResults.slice(0, 5); }
+      else { var topFive = allResults.slice(0, allResults.length); }
+    }
+
+    if (continueForm) {
+      sessionStorage.setItem('topFive', JSON.stringify(topFive));
+      window.location.href = "top-five.html"
+    }
+
+  }.bind(this));
+});
 
 var topFive = JSON.parse(sessionStorage.getItem('topFive'));
 init();
