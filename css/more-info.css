@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    justify-content: center;
+    align-items:stretch;
+    
+    height: 100%;
+   
+    background-image: url("/img/xbox.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ 
+  }
+
+.top{
+    flex: 1 1 auto;
+    
+
+}
+.middle{
+    display: flex;
+    overflow: auto;
+    min-height: min-content;
+    order: 0;
+    flex: 1 1 auto;
+   
+}
+
+
+.bottom{
+    flex: 1 1 auto;
+    bottom: 0;
+}

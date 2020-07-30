@@ -5,7 +5,10 @@ body, html {
 body {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  
   justify-content: center;
+  align-items:stretch;
 
   background-image: url("/img/xbox.jpg");
   background-position: center;
@@ -59,6 +62,7 @@ body {
   text-align:center;
   color: white;
   font-family: 'Ubuntu Mono', monospace;
+
 }
 
 .search-content{
@@ -136,4 +140,29 @@ body {
   padding-top: 7%;
   font-size: 3vw;
   white-space: nowrap;
+}
+
+
+
+/* ADDING MORE CONTENT - mina [7-29-2020] */
+.top{
+  flex: 1 1 auto;
+  
+
+}
+.middle{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex-wrap: wrap;
+  min-height: min-content;
+  order: 0;
+  flex: 1 1 auto;
+ 
+}
+
+
+.bottom{
+  flex: 1 1 auto;
+  bottom: 0;
 }

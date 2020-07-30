@@ -1,7 +1,7 @@
 function drawMoreInfoPage(gameInfo) {
-  let output = `
+    let output = `
       <div class="col-md-4>
-          <img src="https://media.rawg.io/media/games/${gameInfo.background_image}" class=thumbail">
+          <img src="https://media.rawg.io/media/games/${gameInfo.background_image}" class=thumbail" alt="image>
       </div>
 
       <div class="col-md-8">
@@ -9,16 +9,17 @@ function drawMoreInfoPage(gameInfo) {
           <ul class="list-group">
               <li class="list-group-item"><strong>Rating:</strong> ${gameInfo.metacritic}</li>
               <li class="list-group-item"><strong>Released:</strong> ${gameInfo.released}</li>
-              <li class="list-group-item"><strong>Stores:</strong> ${gameInfo.stores}</li>
-              <li class="list-group-item"><strong>Platforms:</strong> ${gameInfo.platforms[0].name}, ${gameInfo.platforms[1]}, ${gameInfo.platforms[2]}</li>
-              <li class="list-group-item"><strong>Genre:</strong> ${gameInfo.genres[0]}, ${gameInfo.genres[1]}, ${gameInfo.genres[2]}</li>
-          </ul>
+              <li class="list-group-item"><strong>Stores:</strong> ${gameInfo.stores[0]}</li>
+              <li class="list-group-item"><strong>Platforms:</strong> ${gameInfo.platforms[0].platform.name}</li>
+              <li class="list-group-item"><strong>Genre:</strong> ${gameInfo.genres[0].name}</li>
+              <li class="list-group-item"><strong>Developer:</strong> ${gameInfo.developers[0].name}</li>
+            </ul>
       </div>
   </div>
 
   <div class="row">
       <div class="well">
-          <h3>Plot</h3>
+          <h3>Description</h3>
           ${gameInfo.description}
           <hr>
           <a href="index.html" class="btn btn-default">Go Back to Search</a>
@@ -27,7 +28,6 @@ function drawMoreInfoPage(gameInfo) {
   `;
   $('#game').html(output);
 }
-
 
 function init() {
   var gameInfo = JSON.parse(sessionStorage.getItem('gameInfo'));
