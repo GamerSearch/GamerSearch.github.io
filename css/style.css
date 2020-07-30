@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
-  margin: 0;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -9,20 +9,28 @@ body {
   
   justify-content: center;
   align-items:stretch;
-  
-  height: 100%;
- 
+
   background-image: url("/img/xbox.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-
 }
 
+.top {
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
 
-.active {
-  background-color: #4CAF50;
+.middle {
+  flex: 1 1 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom {
+  flex: 1 1 auto;
 }
 
 .search-container{
@@ -39,9 +47,6 @@ body {
   overflow:hidden;
 }
 
-
-
-
 #footer {
   text-align: center;
   bottom: 30px;
@@ -51,32 +56,24 @@ body {
   flex: 0 1 auto;
 }
 
-
-
-/* new added content : edit - Mina Trevizo */
-
-
-
-.navBar {
-  width: 100%;
-  overflow: hidden;
-
-}
-
 .titleBar{
+  flex: 0 1 auto;
+
+  text-align:center;
   color: white;
   font-family: 'Ubuntu Mono', monospace;
 
 }
 
 .search-content{
+  flex: 0 1 auto;
+
   display: flex;
   flex-direction: row;
-  position: auto;
+
   width: 100%;
   height: fit-content;
   padding: 50px;
-  overflow: hidden;
 
 }
 
@@ -102,16 +99,19 @@ body {
 }
 
 .main-content {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
+  overflow-y: scroll;
+
 
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .container {
   flex: 0 1 auto;
   color: white;
+
   display: flex;
   max-width: 85%;
   border-style: solid;
