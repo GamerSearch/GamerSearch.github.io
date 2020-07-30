@@ -2,47 +2,24 @@ body, html {
   height: 100%;
   margin: 0;
 }
-
 body {
   display: flex;
   flex-direction: column;
-  text-align:center;
+  flex-wrap: nowrap;
+  
   justify-content: center;
-
+  align-items:stretch;
+  
   height: 100%;
-
+ 
   background-image: url("/img/xbox.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
 
 .active {
   background-color: #4CAF50;
@@ -89,6 +66,7 @@ li a:hover {
 .titleBar{
   color: white;
   font-family: 'Ubuntu Mono', monospace;
+
 }
 
 .search-content{
@@ -162,4 +140,29 @@ li a:hover {
   padding-top: 7%;
   font-size: 3vw;
   white-space: nowrap;
+}
+
+
+
+/* ADDING MORE CONTENT - mina [7-29-2020] */
+.top{
+  flex: 1 1 auto;
+  
+
+}
+.middle{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex-wrap: wrap;
+  min-height: min-content;
+  order: 0;
+  flex: 1 1 auto;
+ 
+}
+
+
+.bottom{
+  flex: 1 1 auto;
+  bottom: 0;
 }
