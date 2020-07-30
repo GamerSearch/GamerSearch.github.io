@@ -13,7 +13,7 @@
   var apiHandler = new ApiHandler(SERVER_URL);
 
   formHandler.addSubmitHandler( function (data) {
-    return apiHandler.searchGame.call(apiHandler, data)
+    return apiHandler.searchGames.call(apiHandler, data)
     .then(function (serverResponse) {
       var allResults = serverResponse["results"];
       var continueForm = false;
@@ -29,7 +29,7 @@
 
       if (continueForm) {
         sessionStorage.setItem('topFive', JSON.stringify(topFive));
-        window.location.replace("top-five.html")
+        window.location.href = "top-five.html";
       }
 
     }.bind(this));
