@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  
+
   justify-content: center;
   align-items:stretch;
 
@@ -16,21 +16,14 @@ body {
   background-size: cover;
 }
 
-.top {
-  flex: 1 1 auto;
-  white-space: nowrap;
-}
+.main-content {
+  flex: 0 1 auto;
+  overflow-y: scroll;
 
-.middle {
-  flex: 1 1 80%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.bottom {
-  flex: 1 1 auto;
+  overflow-y: scroll;
 }
 
 .search-container{
@@ -98,16 +91,6 @@ body {
   cursor: pointer;
 }
 
-.main-content {
-  flex: 0 1 auto;
-  overflow-y: scroll;
-
-
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-}
-
 .container {
   flex: 0 1 auto;
   color: white;
@@ -145,11 +128,10 @@ body {
 
 
 /* ADDING MORE CONTENT - mina [7-29-2020] */
-.top{
+.top {
   flex: 1 1 auto;
-  
-
 }
+
 .middle{
   display: flex;
   flex-direction: column;
@@ -158,7 +140,7 @@ body {
   min-height: min-content;
   order: 0;
   flex: 1 1 auto;
- 
+
 }
 
 

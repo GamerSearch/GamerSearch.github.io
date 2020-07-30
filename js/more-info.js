@@ -31,9 +31,7 @@ function drawMoreInfoPage(gameInfo) {
 
 function init() {
   var gameInfo = JSON.parse(sessionStorage.getItem('gameInfo'));
-  console.log("LOOK")
-  console.log(gameInfo)
-  drawMoreInfoPage(gameInfo);
+  drawMoreInfoPage(gameInfo );
 }
 
 init();
