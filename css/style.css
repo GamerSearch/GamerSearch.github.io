@@ -1,28 +1,29 @@
 body, html {
   height: 100%;
-  margin: 0;
 }
+
 body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  
+
   justify-content: center;
   align-items:stretch;
-  
-  height: 100%;
- 
+
   background-image: url("/img/xbox.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-
 }
 
+.main-content {
+  flex: 0 1 auto;
+  overflow-y: scroll;
 
-.active {
-  background-color: #4CAF50;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 .search-container{
@@ -39,9 +40,6 @@ body {
   overflow:hidden;
 }
 
-
-
-
 #footer {
   text-align: center;
   bottom: 30px;
@@ -51,32 +49,24 @@ body {
   flex: 0 1 auto;
 }
 
-
-
-/* new added content : edit - Mina Trevizo */
-
-
-
-.navBar {
-  width: 100%;
-  overflow: hidden;
-
-}
-
 .titleBar{
+  flex: 0 1 auto;
+
+  text-align:center;
   color: white;
   font-family: 'Ubuntu Mono', monospace;
 
 }
 
 .search-content{
+  flex: 0 1 auto;
+
   display: flex;
   flex-direction: row;
-  position: auto;
+
   width: 100%;
   height: fit-content;
   padding: 50px;
-  overflow: hidden;
 
 }
 
@@ -101,17 +91,10 @@ body {
   cursor: pointer;
 }
 
-.main-content {
-  flex: 1 1 auto;
-
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
 .container {
   flex: 0 1 auto;
   color: white;
+
   display: flex;
   max-width: 85%;
   border-style: solid;
@@ -145,11 +128,10 @@ body {
 
 
 /* ADDING MORE CONTENT - mina [7-29-2020] */
-.top{
+.top {
   flex: 1 1 auto;
-  
-
 }
+
 .middle{
   display: flex;
   flex-direction: column;
@@ -158,7 +140,7 @@ body {
   min-height: min-content;
   order: 0;
   flex: 1 1 auto;
- 
+
 }
 
 
