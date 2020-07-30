@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<script type="text/javascript"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script type="text/javascript"></script>
     <script src="js/about.js" charset="utf-8"></script>-->
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>About Us</title>
-  </head>
-  <body class="bg">
-    <ul>
-      <li><a class="home" id="home" href="index.html">Home</a></li>
-      <li><a class="active" id="about" href="about.html">About</a></li>
-      <li><a class="contact" id="contact" href="contact.html">Contact</a></li>
-    </ul>
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <title>About Us</title>
+</head>
 
-    <br>
+<body class="bg">
+  <div class="top">
+    <nav class="navbar navbar-default">
+      <ul class="nav nav-pills">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-    <div class="about-us">
-      <h1>Hello! We are Gamer's Engine</h1>
-      <br>
-    </div>
 
-    <br>
-    <br>
+  <div class="about-us">
+    <h1>Hello! We are Gamer's Engine</h1>
+  </div>
 
-    <div class="tab">
-      <button class="tablinks" onclick="openInfo(event, 'GamerSearch')" id="defaultOpen">What is Gamer Search?</button>
-      <button class="tablinks" onclick="openInfo(event, 'Objective')">What is our objecive?</button>
-      <button class="tablinks" onclick="openInfo(event, 'Info')">What do we provide?</button>
-    </div>
 
-    <div id="GamerSearch" class="tabcontent">
-      <h3>What is Gamer Search?</h3>
-      <p>Glad you asked. Gamer's Engine is a web application that provides you a place
+  <div class="tab">
+    <button class="tablinks" onclick="openInfo(event, 'GamerSearch')" id="defaultOpen">What is Gamer Search?</button>
+    <button class="tablinks" onclick="openInfo(event, 'Objective')">What is our objecive?</button>
+    <button class="tablinks" onclick="openInfo(event, 'Info')">What do we provide?</button>
+  </div>
+
+  <div id="GamerSearch" class="tabcontent">
+    <h3>What is Gamer Search?</h3>
+    <p>Glad you asked. Gamer's Engine is a web application that provides you a place
       where all gaming information is located, without having the hassle to click around
       multiple websites.</p>
-    </div>
+  </div>
 
-    <div id="Objective" class="tabcontent">
-      <h3>What is our objective?</h3>
-      <p>Great question! We at Gamer's Engine want to provide the best web application
-        for you, the gamer, to search for any video game and be able to find the most
-        relevant information that an elite gamer would care about, all in one place.
-        This is made possible thanks to the wonderful people who created RAWG Video Game
-        Database (Rapid API).</p>
-    </div>
+  <div id="Objective" class="tabcontent">
+    <h3>What is our objective?</h3>
+    <p>Great question! We at Gamer's Engine want to provide the best web application
+      for you, the gamer, to search for any video game and be able to find the most
+      relevant information that an elite gamer would care about, all in one place.
+      This is made possible thanks to the wonderful people who created RAWG Video Game
+      Database (Rapid API).</p>
+  </div>
 
-    <div id="Info" class="tabcontent">
-      <h3>What do we provide?</h3>
-      <p>Another excellent question. We provide any relevant information any gamer would
+  <div id="Info" class="tabcontent">
+    <h3>What do we provide?</h3>
+    <p>Another excellent question. We provide any relevant information any gamer would
       for in a specific videogame. Whether that includes the game's description, pricing,
       what stores sell it, and its rating.</p>
-    </div>
-    <br>
-    <br>
+  </div>
+  <br>
+  <br>
 
-    <script>
-    function openInfo(evt, webInfo){
+  <script>
+    function openInfo(evt, webInfo) {
       var i, tabcontent, tablinks;
 
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -76,13 +79,13 @@
     }
 
     document.getElementById("defaultOpen").click();
-
   </script>
 
-    <footer id="footer">
-      <p><strong>Copyright &copy; Gamer's Engine 2020</strong></p>
-      <span><strong>Photo by <a href="https://unsplash.com/@mazurekphotographer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Bartek Mazurek</a> on
+  <footer id="footer">
+    <p><strong>Copyright &copy; Gamer's Engine 2020</strong></p>
+    <span><strong>Photo by <a href="https://unsplash.com/@mazurekphotographer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Bartek Mazurek</a> on
         <a href="https://unsplash.com/s/photos/playstation?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" style="color:white">Unsplash</a></strong></span>
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>

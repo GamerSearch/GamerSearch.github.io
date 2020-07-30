@@ -29,7 +29,7 @@
 
       if (continueForm) {
         sessionStorage.setItem('topFive', JSON.stringify(topFive));
-        window.location.replace("top-five.html")
+        window.location.href = "top-five.html";
       }
 
     }.bind(this));

@@ -1,39 +1,59 @@
 function drawMoreInfoPage(gameInfo) {
-  let output = `
-      <div class="col-md-4>
-          <img src="https://media.rawg.io/media/games/${gameInfo.background_image}" class=thumbail">
-      </div>
+  var allStores = [];
+  var stores = gameInfo['stores'];
+  stores.forEach(function(item) {
+    allStores.push(item["store"]["name"]);
+  })
+  var storesString = allStores.join(", ");
 
+  var allPlatforms = [];
+  var platforms = gameInfo['parent_platforms'];
+  platforms.forEach(function(item) {
+    allPlatforms.push(item["platform"]["name"]);
+  })
+  var platFormString = allPlatforms.join(", ");
+
+  var allGenres = [];
+  var genres = gameInfo['genres'];
+  genres.forEach(function(item) {
+    allGenres.push(item["name"]);
+  })
+  var genresString = allGenres.join(", ");
+
+  var allDevelopers = [];
+  var developers = gameInfo['developers'];
+  developers.forEach(function(item) {
+    allDevelopers.push(item["name"]);
+  })
+  var developersString = allDevelopers.join(", ");
+
+  let output = `
       <div class="col-md-8">
           <h2>${gameInfo.name}</h2>
+          <img src="${gameInfo.background_image}" class="img-responsive">
           <ul class="list-group">
-              <li class="list-group-item"><strong>Rating:</strong> ${gameInfo.metacritic}</li>
-              <li class="list-group-item"><strong>Released:</strong> ${gameInfo.released}</li>
-              <li class="list-group-item"><strong>Stores:</strong> ${gameInfo.stores}</li>
-              <li class="list-group-item"><strong>Platforms:</strong> ${gameInfo.platforms[0].name}, ${gameInfo.platforms[1]}, ${gameInfo.platforms[2]}</li>
-              <li class="list-group-item"><strong>Genre:</strong> ${gameInfo.genres[0]}, ${gameInfo.genres[1]}, ${gameInfo.genres[2]}</li>
-          </ul>
+              <li class="list-group-item" id="rating"><strong>Metacritic Rating: </strong>${gameInfo.metacritic}</li>
+              <li class="list-group-item" id="releaseDate"><strong>Released: </strong>${gameInfo.released}</li>
+              <li class="list-group-item" id="stores"><strong>Store(s): </strong>${storesString}</li>
+              <li class="list-group-item" id="platforms"><strong>Platform(s): </strong>${platFormString}</li>
+              <li class="list-group-item" id="genres"><strong>Genre(s): </strong>${genresString}</li>
+              <li class="list-group-item" id="developers"><strong>Developer(s): </strong>${developersString}</li>
+            </ul>
       </div>
-  </div>
 
-  <div class="row">
-      <div class="well">
-          <h3>Plot</h3>
-          ${gameInfo.description}
-          <hr>
-          <a href="index.html" class="btn btn-default">Go Back to Search</a>
+      <div class="row">
+        <h3>Description</h3>
+        ${gameInfo.description}
+        <a href="index.html" class="btn btn-default">Go Back to Search</a>
       </div>
-  </div>
   `;
   $('#game').html(output);
 }
 
-
 function init() {
   var gameInfo = JSON.parse(sessionStorage.getItem('gameInfo'));
-  console.log("LOOK")
-  console.log(gameInfo)
   drawMoreInfoPage(gameInfo);
+
 }
 
 init();

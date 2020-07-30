@@ -1,15 +1,14 @@
 body, html {
   height: 100%;
-  margin: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  text-align:center;
-  justify-content: center;
+  flex-wrap: nowrap;
 
-  height: 100%;
+  justify-content: center;
+  align-items:stretch;
 
   background-image: url("/img/xbox.jpg");
   background-position: center;
@@ -17,35 +16,14 @@ body {
   background-size: cover;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+.main-content {
+  flex: 0 1 auto;
+  overflow-y: scroll;
 
-li {
-  float: left;
-}
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 .search-container{
@@ -62,9 +40,6 @@ li a:hover {
   overflow:hidden;
 }
 
-
-
-
 #footer {
   text-align: center;
   bottom: 30px;
@@ -74,31 +49,24 @@ li a:hover {
   flex: 0 1 auto;
 }
 
-
-
-/* new added content : edit - Mina Trevizo */
-
-
-
-.navBar {
-  width: 100%;
-  overflow: hidden;
-
-}
-
 .titleBar{
+  flex: 0 1 auto;
+
+  text-align:center;
   color: white;
   font-family: 'Ubuntu Mono', monospace;
+
 }
 
 .search-content{
+  flex: 0 1 auto;
+
   display: flex;
   flex-direction: row;
-  position: auto;
+
   width: 100%;
   height: fit-content;
   padding: 50px;
-  overflow: hidden;
 
 }
 
@@ -123,29 +91,64 @@ li a:hover {
   cursor: pointer;
 }
 
-.main-content {
-  flex: 1 1 auto;
-
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
 .container {
   flex: 0 1 auto;
   color: white;
+
   display: flex;
+  max-width: 85%;
+  border-style: solid;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+.container:hover {
+  transform: scale(1.05);
 }
 
 .image-container {
   flex: 1 1 30%;
-  width: 600px;
+  max-width:500px;
+  min-width:50px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 
 .title-container {
-  flex: 1 1 auto;
+  flex: 1 1 70%;
   color: white;
   font-family: 'Ubuntu Mono', monospace;
   text-align: center;
+  padding-top: 7%;
+  font-size: 3vw;
+  white-space: nowrap;
+}
+
+
+
+/* ADDING MORE CONTENT - mina [7-29-2020] */
+.top {
+  flex: 1 1 auto;
+}
+
+.middle{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex-wrap: wrap;
+  min-height: min-content;
+  order: 0;
+  flex: 1 1 auto;
+
+}
+
+
+.bottom{
+  flex: 1 1 auto;
+  bottom: 0;
 }
