@@ -1,19 +1,34 @@
 function drawMoreInfoPage(gameInfo) {
-    let output = `
+  for (i in gameInfo.genres)
+  {
+      gameInfo.genres[i].name;
+      console.log(gameInfo.genres[i].name);
+  }
+
+  for (j in gameInfo.platforms) {
+      gameInfo.platforms[j].platform.name;
+      console.log(gameInfo.platforms[j].platform.name);
+  }
+
+  for (k in gameInfo.stores) {
+      gameInfo.stores[k].store.name;
+      console.log(gameInfo.stores[k].store.name);
+  }
+
+  let output = `
       <div class="col-md-4>
-          <img src="https://media.rawg.io/media/games/${gameInfo.background_image}" class=thumbail" alt="image>
       </div>
 
       <div class="col-md-8">
           <h2>${gameInfo.name}</h2>
+          <img src="${gameInfo.background_image}" class=thumbail">
           <ul class="list-group">
               <li class="list-group-item"><strong>Rating:</strong> ${gameInfo.metacritic}</li>
               <li class="list-group-item"><strong>Released:</strong> ${gameInfo.released}</li>
-              <li class="list-group-item"><strong>Stores:</strong> ${gameInfo.stores[0]}</li>
-              <li class="list-group-item"><strong>Platforms:</strong> ${gameInfo.platforms[0].platform.name}</li>
-              <li class="list-group-item"><strong>Genre:</strong> ${gameInfo.genres[0].name}</li>
-              <li class="list-group-item"><strong>Developer:</strong> ${gameInfo.developers[0].name}</li>
-            </ul>
+              <li class="list-group-item"><strong>Stores:</strong> ${gameInfo.stores[k].store.name}</li>
+              <li class="list-group-item"><strong>Platforms:</strong> ${gameInfo.platforms[j].platform.name}</li>
+              <li class="list-group-item"><strong>Genre:</strong> ${gameInfo.genres[i].name}</li>
+          </ul>
       </div>
   </div>
 
@@ -31,9 +46,7 @@ function drawMoreInfoPage(gameInfo) {
 
 function init() {
   var gameInfo = JSON.parse(sessionStorage.getItem('gameInfo'));
-  console.log("LOOK")
-  console.log(gameInfo)
-  drawMoreInfoPage(gameInfo);
+  drawMoreInfoPage(gameInfo );
 }
 
 init();
